@@ -25,9 +25,8 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
 	        <li><a href="#default-event">Default Event</a></li>
-	        <li><a href="#">[LINK]</a></li>
-	        <li><a href="#">[LINK]</a></li>
-	        <li><a href="#">[LINK]</a></li>
+	        <li><a href="#custom-events">Custom Events</a></li>
+
 	        
 	      </ul>
 
@@ -42,7 +41,7 @@
 		<div id="content-wrapper">
 
 			<!-- Default Event -->
-			<div id="default-event">
+			<div id="default-event" class="bb">
 				<div class="col-md-7">
 					<h1 class="headers">1. Default &amp; Inbuilt Events</h1>
 					<p>This link is a default click event that opens a page called <code>transform.html</code></p>
@@ -76,15 +75,36 @@
 				</div>
 			</div>
 
-			<!--  -->
+			<!-- Custom Events -->
+			<div id="custom-events" class="bb">
+				<div class="col-md-7">
+					<h1 class="headers">2. Custom Javascript Events</h1>
+					<p>in this example you enter your name and then the custom event calculates your worth after pressing the <br> submit button</p>
+					<p>In order for this to work though, we must activate the link by clicking on activate</p>
+					<div class="form-group">
+						<label for="">Your Net Worth</label>
+						<input id="your-name" type="text" class="form-control">
+					</div>
+					
+					<div class="form-group">
+						<button id="worth-show" onclick="customEvent()" type="button" class="btn btn-primary form-control">Show me my worth</button>
+					</div>
+
+					<div id="worth" class="jumbotron">
+						
+					</div>
+				</div>
+			</div>
 			
 	</div>
 <script src="js/default_events.js"></script>
+<script src="js/custom_events.js"></script>
 <script>
 //deactivate link
-document.getElementById("transform-link").addEventListener("click", function(event){
-    event.preventDefault()
+document.getElementById("transform-link").addEventListener("click", function(e){
+    e.preventDefault()
 });
+
 
 </script>
 </body>
